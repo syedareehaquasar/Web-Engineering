@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <script>
+        function calculate() {
+            p = document.getElementById("principle").value;
+            n = document.getElementById("n").value;
+            r = document.getElementById("rate").value;
+            result = document.getElementById("result");
+
+            result.innerHTML = "Interest is " + (p * n * r / 100);
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="container content-center mx-auto p-2">
+        <h1 class="flex justify-center text-3xl font-bold center text-blue-500">Simple Interest Calculator</h1>
+
+        <div class="text-xl flex justify-around p-4 items-center">
+            Principle Amount: <input class="p-2 shadow-inner border-2 text-blue-900" id="principle">
+            Rate: <input id="rate" class="p-2 shadow-inner border-2 text-blue-900">
+            No. of Years: <input id="n" class="p-2 shadow-inner border-2 text-blue-900">
+        </div>
+
+        <div class="flex justify-center">
+            <button
+                class="w-2/5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+                onclick="calculate()">
+                Calculate
+            </button>
+        </div>
+
+        <br><br>
+        <p id="result" class="text-red-500 text-2xl font-bold flex justify-center"></p>
+    </div>
+</body>
+
+</html>
