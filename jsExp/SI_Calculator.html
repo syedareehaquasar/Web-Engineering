@@ -14,6 +14,15 @@
             result = document.getElementById("result");
 
             result.innerHTML = "Interest is " + (p * n * r / 100);
+
+            var currentdate = new Date();
+            var datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth() + 1) + "/"
+                + currentdate.getFullYear() + " @ "
+                + currentdate.getHours() + ":"
+                + currentdate.getMinutes() + ":"
+                + currentdate.getSeconds();
+            footer.innerHTML = "Last Calculated at: " + datetime;
         }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -38,8 +47,11 @@
         </div>
 
         <br><br>
-        <p id="result" class="text-red-500 text-2xl font-bold flex justify-center"></p>
+        <p id="result" class="text-red-500 text-2xl font-bold flex justify-center"></p><br><br><br>
     </div>
+    <footer>
+        <p id="footer" class="text-blue-500 text-2xl font-bold flex justify-center"></p>
+    </footer>
 </body>
 
 </html>
